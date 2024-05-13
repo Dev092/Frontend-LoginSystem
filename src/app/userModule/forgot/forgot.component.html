@@ -1,0 +1,11 @@
+<p>forgot works!</p>
+<form (ngSubmit)="userForgot()">
+    <label>UserID</label>
+    <input type="text" [(ngModel)]="user.email" id="email" name="email">
+
+    <label>Password</label>
+    <input type="text" [(ngModel)]="user.password" id="password" name="password">
+
+    <button type="submit">Change Password</button>
+
+</form>

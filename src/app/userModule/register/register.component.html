@@ -1,0 +1,37 @@
+<h1 class="head">Sign Up</h1>
+ 
+<form (ngSubmit)="onSubmit()" #signupForm="ngForm" class="signup-form">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control" [(ngModel)]="user.email" name="email" required>
+    </div>
+ 
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" class="form-control" [(ngModel)]="user.firstName" name="firstname" required>
+    </div>
+ 
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" class="form-control" [(ngModel)]="user.lastName" name="lastname" required>
+    </div>
+ 
+    <!-- <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" class="form-control" [(ngModel)]="user.dob" name="dob" required>
+    </div> -->
+ 
+    <div class="form-group">
+        <label for="contact">Age</label>
+        <input type="number" id="contact" class="form-control" [(ngModel)]="user.age" name="contact" required>
+    </div>
+ 
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" [(ngModel)]="user.password" name="password" required>
+    </div>
+ 
+    <button type="submit" class="submit-button" [disabled]="!signupForm.form.valid">Submit</button>
+</form>
+ 
+ 
